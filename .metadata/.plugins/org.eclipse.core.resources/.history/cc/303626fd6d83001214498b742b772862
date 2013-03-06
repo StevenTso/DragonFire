@@ -42,7 +42,6 @@ void format_SD() {
 	/*Create a ReadMe.txt*/
 	printf("\nCreating ReadMe.txt\n");
 	(void)f_open(&Fil, "ReadMe.txt", FA_WRITE | FA_CREATE_ALWAYS);
-
 	printf("\nWrite a text data. (Hello world!)\n");
 	rc = f_write(&Fil, "Welcome to DragonFire.\r\n This is beta release 1.0\r\n", 51, &bw);
 	if (rc) sd_die(rc);
