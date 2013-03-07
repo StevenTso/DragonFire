@@ -1,0 +1,30 @@
+01:04:06 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+Performing post-build steps
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31576	      4	   1760	  33340	   823c	DragonFire(SemiHosting).axf
+ 
+
+01:04:06 Build Finished (took 684ms)
+

@@ -70,7 +70,7 @@ void I2C_IRQHandler(void)
 		/* Send SLA with R bit set, */
 		LPC_I2C->DAT = I2CMasterBuffer[WrIndex++];
 		LPC_I2C->CONCLR = (I2CONCLR_SIC | I2CONCLR_STAC);
-	break;
+		break;
 	
 	case 0x18:
 		/*

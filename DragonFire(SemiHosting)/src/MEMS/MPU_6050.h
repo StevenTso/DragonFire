@@ -95,12 +95,12 @@
 void MEMSInit(void);
 uint16_t startMEMS(void);
 uint16_t stopMEMS(void);
-uint16_t getRawAccelX(void);
-uint16_t getRawAccelY(void);
-uint16_t getRawAccelZ(void);
-uint16_t getRawGyroX(void);
-uint16_t getRawGyroY(void);
-uint16_t getRawGyroZ(void);
-uint32_t getTemp(void);
+int16_t getRawAccelX(void);
+int16_t getRawAccelY(void);
+int16_t getRawAccelZ(void);
+int16_t getRawGyroX(void);
+int16_t getRawGyroY(void);
+int16_t getRawGyroZ(void);
+int32_t getTemp(void);
 
 #endif /* MPU_6050_H_ */

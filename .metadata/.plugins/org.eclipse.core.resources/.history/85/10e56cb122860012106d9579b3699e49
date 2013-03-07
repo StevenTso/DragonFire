@@ -1,0 +1,98 @@
+/*
+===============================================================================
+ Name        : main.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC11Uxx.h"
+#endif
+
+#include <cr_section_macros.h>
+#include <NXP/crp.h>
+#include "driver_config.h" /*Driver configurations*/
+#include "gpio.h" /*IO Library*/
+#include "ff.h" /*SD CARD Library*/
+#include "i2c.h"
+#include "MPU_6050.h" /*MEMS Library*/
+// Variable to store CRP value in. Will be placed automatically
+// by the linker when "Enable Code Read Protect" selected.
+// See crp.h header for more information
+__CRP const unsigned int CRP_WORD = CRP_NO_CRP ;
+
+#include <stdio.h>
+
+// TODO: insert other definitions and declarations here
+FATFS Fatfs;		/* File system object */
+FIL Fil;			/* File object */
+BYTE Buff[128];		/* File read buffer */
+
+void format_SD() {
+	FRESULT rc;				/* Result code */
+	DIR dir;				/* Directory object */
+	FILINFO fno;			/* File information object */
+	UINT bw, br, i;
+
+	f_mount(0, &Fatfs);		//Register volume work area (never fails)
+
+	/*Create a ReadMe.txt*/
+	printf("\nCreating ReadMe.txt\n");
+	(void)f_open(&Fil, "ReadMe.txt", FA_WRITE | FA_CREATE_ALWAYS);
+
+	printf("\nWrite a text data. (Hello world!)\n");
+	rc = f_write(&Fil, "Welcome to DragonFire.\r\n This is beta release 1.0\r\n", 51, &bw);
+	if (rc) sd_die(rc);
+	/*Create /DataLog*/
+	printf("\nCreate directory DataLog\n");
+	(void)f_mkdir("DataLog");
+
+	printf("\nClose the file.\n");
+	rc = f_close(&Fil);
+	if (rc) sd_die(rc);
+
+	printf("\nInitialize Complete\n");
+}
+
+/*-----------------------------------------------------------------------*/
+/* Program Main                                                          */
+/*-----------------------------------------------------------------------*/
+
+int main (void)
+{
+	int status;
+	status = MEM_OFF;
+	/*GPIO*/
+	int switchStatus;
+ 	GPIOInit();
+	//SWITCH
+	GPIOSetDir(SWITCHPORT,SWITCHPIN, INPUT);
+	//LED
+	GPIOSetDir(LEDPORT, LEDPIN, OUTPUT);
+	GPIOSetBitValue(LEDPORT, LEDPIN,OFF);
+
+	/*FatFs*/
+	format_SD();
+
+	/*MEMS*/
+	MEMSInit(); //Initializes all things to do with the MEMS chip to work and low level I2C stuff
+
+	while(1) {
+		switchStatus = GPIOGetPinValue(SWITCHPORT, SWITCHPIN);
+		//Switch is off
+		if(switchStatus == OFF) {
+			GPIOSetBitValue(LEDPORT, LEDPIN, OFF);
+			if(status==MEM_ON)
+				status = stopMEMS();
+		}
+		//Switch is on
+		else {
+			GPIOSetBitValue(LEDPORT, LEDPIN, ON);
+			if(status==MEM_OFF)
+				status = startMEMS();
+		}
+	}
+}

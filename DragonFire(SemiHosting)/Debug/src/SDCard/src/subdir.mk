@@ -20,7 +20,7 @@ C_DEPS += \
 src/SDCard/src/%.o: ../src/SDCard/src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

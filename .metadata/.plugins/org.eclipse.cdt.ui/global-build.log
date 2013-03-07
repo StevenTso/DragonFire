@@ -1,0 +1,1608 @@
+00:02:09 **** Clean-only build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make clean 
+rm -rf  ./src/core_cm0.o ./src/system_LPC11Uxx.o  ./src/core_cm0.d ./src/system_LPC11Uxx.d  libCMSISv2p00_LPC11Uxx.a
+ 
+00:02:12 **** Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+Building file: ../src/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/core_cm0.d" -MT"src/core_cm0.d" -o"src/core_cm0.o" "../src/core_cm0.c"
+Finished building: ../src/core_cm0.c
+ 
+Building file: ../src/system_LPC11Uxx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/system_LPC11Uxx.d" -MT"src/system_LPC11Uxx.d" -o"src/system_LPC11Uxx.o" "../src/system_LPC11Uxx.c"
+Finished building: ../src/system_LPC11Uxx.c
+ 
+Building target: libCMSISv2p00_LPC11Uxx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r "libCMSISv2p00_LPC11Uxx.a"  ./src/core_cm0.o ./src/system_LPC11Uxx.o   
+arm-none-eabi-ar: creating libCMSISv2p00_LPC11Uxx.a
+Finished building target: libCMSISv2p00_LPC11Uxx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11Uxx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11Uxx.a >libCMSISv2p00_LPC11Uxx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11Uxx.a)
+    428	      4	      0	    432	    1b0	system_LPC11Uxx.o (ex libCMSISv2p00_LPC11Uxx.a)
+ 
+00:02:15 **** Clean-only build of configuration Debug for project DragonFire(SemiHosting) ****
+make clean 
+rm -rf  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o  ./src/lib/delay.d ./src/lib/gpio.d ./src/lib/i2c.d ./src/lib/ssp.d ./src/lib/timer16.d  ./src/SDCard/src/ff.d ./src/SDCard/src/mmc.d  ./src/MEMS/MPU_6050.d  ./src/cr_startup_lpc11u.d ./src/main.d  DragonFire(SemiHosting).axf
+/bin/sh: -c: line 0: syntax error near unexpected token `('
+ 
+/bin/sh: -c: line 0: `rm -rf  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o  ./src/lib/delay.d ./src/lib/gpio.d ./src/lib/i2c.d ./src/lib/ssp.d ./src/lib/timer16.d  ./src/SDCard/src/ff.d ./src/SDCard/src/mmc.d  ./src/MEMS/MPU_6050.d  ./src/cr_startup_lpc11u.d ./src/main.d  DragonFire(SemiHosting).axf'
+make: [clean] Error 2 (ignored)
+00:02:17 **** Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/i2c.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/i2c.d" -MT"src/lib/i2c.d" -o "src/lib/i2c.o" "../src/lib/i2c.c"
+Finished building: ../src/lib/i2c.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'format_SD':
+Finished building: ../src/main.c
+../src/main.c:38:15: warning: unused variable 'i' [-Wunused-variable]
+ 
+../src/main.c:38:11: warning: unused variable 'br' [-Wunused-variable]
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+../src/main.c:37:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/main.c:36:6: warning: unused variable 'dir' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  30920	      4	   1760	  32684	   7fac	DragonFire(SemiHosting).axf
+ 
+00:02:37 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:02:38 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:05:30 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:05:39 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:06:32 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:24:58 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:25:00 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:92:6: error: conflicting types for 'i'
+../src/lib/gpio.c:87:15: note: previous declaration of 'i' was here
+../src/lib/gpio.c:106:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+00:25:03 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:25:04 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:92:6: error: conflicting types for 'i'
+../src/lib/gpio.c:87:15: note: previous declaration of 'i' was here
+../src/lib/gpio.c:106:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+00:25:37 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:25:38 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:92:6: error: conflicting types for 'i'
+../src/lib/gpio.c:87:15: note: previous declaration of 'i' was here
+../src/lib/gpio.c:106:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+00:25:59 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:26:00 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:106:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  30968	      4	   1760	  32732	   7fdc	DragonFire(SemiHosting).axf
+ 
+00:29:19 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:29:20 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:106:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+ 
+Building target: DragonFire(SemiHosting).axf
+../src/lib/gpio.c:107:3: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+Invoking: MCU Linker
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+./src/lib/gpio.o: In function `FLEX_INT0_IRQHandler':
+/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/Debug/../src/lib/gpio.c:107: undefined reference to `print'
+collect2: ld returned 1 exit status
+make: *** [DragonFire(SemiHosting).axf] Error 1
+00:29:34 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:29:35 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:106:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+ 
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+Building target: DragonFire(SemiHosting).axf
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+Invoking: MCU Linker
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31000	      4	   1760	  32764	   7ffc	DragonFire(SemiHosting).axf
+ 
+00:34:41 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:34:42 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:110:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+ 
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+make --no-print-directory post-build
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+Performing post-build steps
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+  31032	      4	   1760	  32796	   801c	DragonFire(SemiHosting).axf
+ 
+00:34:45 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:34:46 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:38:51 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:38:52 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+ 
+../src/lib/gpio.c:110:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Building target: DragonFire(SemiHosting).axf
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+Invoking: MCU Linker
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31032	      4	   1760	  32796	   801c	DragonFire(SemiHosting).axf
+ 
+01:04:03 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:04:05 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:103:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:104:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:105:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:106:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:107:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:111:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:06:07 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:06:08 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:8: error: incompatible types when assigning to type 'char[6][5]' from type 'uint16_t'
+../src/lib/gpio.c:103:8: error: incompatible types when assigning to type 'char[6][5]' from type 'uint16_t'
+../src/lib/gpio.c:104:8: error: incompatible types when assigning to type 'char[6][5]' from type 'uint16_t'
+../src/lib/gpio.c:105:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:106:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:107:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:111:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:06:14 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:06:15 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:8: error: incompatible types when assigning to type 'char[6][5]' from type 'uint16_t'
+../src/lib/gpio.c:103:8: error: incompatible types when assigning to type 'char[6][5]' from type 'uint16_t'
+../src/lib/gpio.c:104:8: error: incompatible types when assigning to type 'char[6][5]' from type 'uint16_t'
+../src/lib/gpio.c:105:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:106:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:107:11: error: incompatible types when assigning to type 'char[5]' from type 'uint16_t'
+../src/lib/gpio.c:111:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:07:28 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:07:29 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:102:29: error: lvalue required as increment operand
+../src/lib/gpio.c:103:29: error: lvalue required as increment operand
+../src/lib/gpio.c:104:29: error: lvalue required as increment operand
+../src/lib/gpio.c:105:28: error: lvalue required as increment operand
+../src/lib/gpio.c:106:28: error: lvalue required as increment operand
+../src/lib/gpio.c:111:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:07:41 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:07:42 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:111:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'format_SD':
+Finished building: ../src/main.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/main.c:39:15: warning: unused variable 'i' [-Wunused-variable]
+../src/main.c:39:11: warning: unused variable 'br' [-Wunused-variable]
+../src/main.c:38:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/main.c:37:6: warning: unused variable 'dir' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31080	      4	   1760	  32844	   804c	DragonFire(SemiHosting).axf
+ 
+01:07:55 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:07:56 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:8: error: lvalue required as increment operand
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:08:08 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:08:09 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:7: error: lvalue required as increment operand
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:09:17 **** Clean-only build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make clean 
+rm -rf  ./src/core_cm0.o ./src/system_LPC11Uxx.o  ./src/core_cm0.d ./src/system_LPC11Uxx.d  libCMSISv2p00_LPC11Uxx.a
+ 
+01:09:17 **** Clean-only build of configuration Debug for project DragonFire(SemiHosting) ****
+make clean 
+rm -rf  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o  ./src/lib/delay.d ./src/lib/gpio.d ./src/lib/i2c.d ./src/lib/ssp.d ./src/lib/timer16.d  ./src/SDCard/src/ff.d ./src/SDCard/src/mmc.d  ./src/MEMS/MPU_6050.d  ./src/cr_startup_lpc11u.d ./src/main.d  DragonFire(SemiHosting).axf
+/bin/sh: -c: line 0: syntax error near unexpected token `('
+ 
+/bin/sh: -c: line 0: `rm -rf  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o  ./src/lib/delay.d ./src/lib/gpio.d ./src/lib/i2c.d ./src/lib/ssp.d ./src/lib/timer16.d  ./src/SDCard/src/ff.d ./src/SDCard/src/mmc.d  ./src/MEMS/MPU_6050.d  ./src/cr_startup_lpc11u.d ./src/main.d  DragonFire(SemiHosting).axf'
+make: [clean] Error 2 (ignored)
+01:09:18 **** Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+Building file: ../src/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/core_cm0.d" -MT"src/core_cm0.d" -o"src/core_cm0.o" "../src/core_cm0.c"
+Finished building: ../src/core_cm0.c
+ 
+Building file: ../src/system_LPC11Uxx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/system_LPC11Uxx.d" -MT"src/system_LPC11Uxx.d" -o"src/system_LPC11Uxx.o" "../src/system_LPC11Uxx.c"
+Finished building: ../src/system_LPC11Uxx.c
+ 
+Building target: libCMSISv2p00_LPC11Uxx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r "libCMSISv2p00_LPC11Uxx.a"  ./src/core_cm0.o ./src/system_LPC11Uxx.o   
+arm-none-eabi-ar: creating libCMSISv2p00_LPC11Uxx.a
+Finished building target: libCMSISv2p00_LPC11Uxx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11Uxx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11Uxx.a >libCMSISv2p00_LPC11Uxx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11Uxx.a)
+    428	      4	      0	    432	    1b0	system_LPC11Uxx.o (ex libCMSISv2p00_LPC11Uxx.a)
+ 
+01:09:20 **** Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:10: error: lvalue required as increment operand
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:09:57 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:09:57 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:10: error: lvalue required as increment operand
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:11:07 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:11:08 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:7: error: invalid operands to binary + (have 'char[6][5]' and 'unsigned int')
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:12:22 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:12:23 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:8: error: lvalue required as left operand of assignment
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:12:57 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:12:58 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:7: error: lvalue required as increment operand
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:12:59 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:12:59 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:102:3: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:103:7: error: lvalue required as increment operand
+../src/lib/gpio.c:112:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:87:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:87:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:85:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:84:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:82:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:14:07 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:14:07 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[5]'
+../src/lib/gpio.c:105:7: error: lvalue required as increment operand
+../src/lib/gpio.c:106:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[6][5]'
+../src/lib/gpio.c:107:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[6][5]'
+../src/lib/gpio.c:108:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[6][5]'
+../src/lib/gpio.c:109:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[6][5]'
+../src/lib/gpio.c:110:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[6][5]'
+../src/lib/gpio.c:114:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:17:04 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:17:05 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[5]'
+../src/lib/gpio.c:112:3: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:112:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:121:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:97:8: warning: unused variable 'zGyro' [-Wunused-variable]
+../src/lib/gpio.c:96:8: warning: unused variable 'yGyro' [-Wunused-variable]
+../src/lib/gpio.c:95:8: warning: unused variable 'xGyro' [-Wunused-variable]
+../src/lib/gpio.c:94:8: warning: unused variable 'zAccel' [-Wunused-variable]
+../src/lib/gpio.c:93:8: warning: unused variable 'yAccel' [-Wunused-variable]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:17:41 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:17:42 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char * (*)[5]'
+../src/lib/gpio.c:112:3: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:112:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:121:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:97:8: warning: unused variable 'zGyro' [-Wunused-variable]
+../src/lib/gpio.c:96:8: warning: unused variable 'yGyro' [-Wunused-variable]
+../src/lib/gpio.c:95:8: warning: unused variable 'xGyro' [-Wunused-variable]
+../src/lib/gpio.c:94:8: warning: unused variable 'zAccel' [-Wunused-variable]
+../src/lib/gpio.c:93:8: warning: unused variable 'yAccel' [-Wunused-variable]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:17:54 **** Clean-only build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make clean 
+rm -rf  ./src/core_cm0.o ./src/system_LPC11Uxx.o  ./src/core_cm0.d ./src/system_LPC11Uxx.d  libCMSISv2p00_LPC11Uxx.a
+ 
+01:17:55 **** Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+Building file: ../src/core_cm0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/core_cm0.d" -MT"src/core_cm0.d" -o"src/core_cm0.o" "../src/core_cm0.c"
+Finished building: ../src/core_cm0.c
+ 
+Building file: ../src/system_LPC11Uxx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/system_LPC11Uxx.d" -MT"src/system_LPC11Uxx.d" -o"src/system_LPC11Uxx.o" "../src/system_LPC11Uxx.c"
+Finished building: ../src/system_LPC11Uxx.c
+ 
+Building target: libCMSISv2p00_LPC11Uxx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r "libCMSISv2p00_LPC11Uxx.a"  ./src/core_cm0.o ./src/system_LPC11Uxx.o   
+arm-none-eabi-ar: creating libCMSISv2p00_LPC11Uxx.a
+Finished building target: libCMSISv2p00_LPC11Uxx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libCMSISv2p00_LPC11Uxx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC11Uxx.a >libCMSISv2p00_LPC11Uxx.lss
+   text	   data	    bss	    dec	    hex	filename
+      0	      0	      0	      0	      0	core_cm0.o (ex libCMSISv2p00_LPC11Uxx.a)
+    428	      4	      0	    432	    1b0	system_LPC11Uxx.o (ex libCMSISv2p00_LPC11Uxx.a)
+ 
+01:17:58 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:112:3: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:112:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:121:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:97:8: warning: unused variable 'zGyro' [-Wunused-variable]
+../src/lib/gpio.c:96:8: warning: unused variable 'yGyro' [-Wunused-variable]
+../src/lib/gpio.c:95:8: warning: unused variable 'xGyro' [-Wunused-variable]
+../src/lib/gpio.c:94:8: warning: unused variable 'zAccel' [-Wunused-variable]
+../src/lib/gpio.c:93:8: warning: unused variable 'yAccel' [-Wunused-variable]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:17:59 **** Clean-only build of configuration Debug for project DragonFire(SemiHosting) ****
+make clean 
+rm -rf  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o  ./src/lib/delay.d ./src/lib/gpio.d ./src/lib/i2c.d ./src/lib/ssp.d ./src/lib/timer16.d  ./src/SDCard/src/ff.d ./src/SDCard/src/mmc.d  ./src/MEMS/MPU_6050.d  ./src/cr_startup_lpc11u.d ./src/main.d  DragonFire(SemiHosting).axf
+/bin/sh: -c: line 0: syntax error near unexpected token `('
+/bin/sh: -c: line 0: `rm -rf  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o  ./src/lib/delay.d ./src/lib/gpio.d ./src/lib/i2c.d ./src/lib/ssp.d ./src/lib/timer16.d  ./src/SDCard/src/ff.d ./src/SDCard/src/mmc.d  ./src/MEMS/MPU_6050.d  ./src/cr_startup_lpc11u.d ./src/main.d  DragonFire(SemiHosting).axf'
+ 
+make: [clean] Error 2 (ignored)
+01:18:10 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:18:11 **** Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:25: warning: value computed is not used [-Wunused-value]
+../src/lib/gpio.c:111:36: error: expected ')' before ';' token
+../src/lib/gpio.c:132:2: error: too few arguments to function 'itoa'
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: declared here
+../src/lib/gpio.c:132:2: error: expected ';' before '}' token
+../src/lib/gpio.c:103:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:103:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:99:7: warning: variable 'ascii_newline' set but not used [-Wunused-but-set-variable]
+../src/lib/gpio.c:97:8: warning: unused variable 'zGyro' [-Wunused-variable]
+../src/lib/gpio.c:96:8: warning: unused variable 'yGyro' [-Wunused-variable]
+../src/lib/gpio.c:95:8: warning: unused variable 'xGyro' [-Wunused-variable]
+../src/lib/gpio.c:94:8: warning: unused variable 'zAccel' [-Wunused-variable]
+../src/lib/gpio.c:93:8: warning: unused variable 'yAccel' [-Wunused-variable]
+../src/lib/gpio.c:92:8: warning: variable 'xAccel' set but not used [-Wunused-but-set-variable]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:7: warning: unused variable 'bw' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:18:21 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:18:22 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:112:3: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:112:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:121:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:97:8: warning: unused variable 'zGyro' [-Wunused-variable]
+../src/lib/gpio.c:96:8: warning: unused variable 'yGyro' [-Wunused-variable]
+../src/lib/gpio.c:95:8: warning: unused variable 'xGyro' [-Wunused-variable]
+../src/lib/gpio.c:94:8: warning: unused variable 'zAccel' [-Wunused-variable]
+../src/lib/gpio.c:93:8: warning: unused variable 'yAccel' [-Wunused-variable]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:18:30 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:18:30 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:112:25: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:112:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:120:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:97:8: warning: unused variable 'zGyro' [-Wunused-variable]
+../src/lib/gpio.c:96:8: warning: unused variable 'yGyro' [-Wunused-variable]
+../src/lib/gpio.c:95:8: warning: unused variable 'xGyro' [-Wunused-variable]
+../src/lib/gpio.c:94:8: warning: unused variable 'zAccel' [-Wunused-variable]
+../src/lib/gpio.c:93:8: warning: unused variable 'yAccel' [-Wunused-variable]
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:19:47 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:19:48 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:111:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:112:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:113:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:114:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:115:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:116:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char **'
+../src/lib/gpio.c:120:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:123:25: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:123:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:20:23 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:20:23 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:120:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+../src/lib/gpio.c:123:25: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:123:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:89:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:89:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:88:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:87:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:86:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:84:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:20:43 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:20:44 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:122:25: error: 'data' undeclared (first use in this function)
+../src/lib/gpio.c:122:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+make: *** [src/lib/gpio.o] Error 1
+01:22:44 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:22:45 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+Building target: DragonFire(SemiHosting).axf
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+Invoking: MCU Linker
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31152	      4	   1760	  32916	   8094	DragonFire(SemiHosting).axf
+ 
+01:22:54 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:22:55 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+01:32:36 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:32:38 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'format_SD':
+Finished building: ../src/main.c
+../src/main.c:39:15: warning: unused variable 'i' [-Wunused-variable]
+ 
+Building target: DragonFire(SemiHosting).axf
+../src/main.c:39:11: warning: unused variable 'br' [-Wunused-variable]
+../src/main.c:38:10: warning: unused variable 'fno' [-Wunused-variable]
+Invoking: MCU Linker
+../src/main.c:37:6: warning: unused variable 'dir' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31184	      4	   1760	  32948	   80b4	DragonFire(SemiHosting).axf
+ 
+01:32:42 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:32:43 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+01:33:40 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+01:39:47 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:39:48 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31264	      4	   1760	  33028	   8104	DragonFire(SemiHosting).axf
+ 
+01:40:05 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:40:05 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+02:27:09 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+02:27:12 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31256	      4	   1760	  33020	   80fc	DragonFire(SemiHosting).axf
+ 
+02:32:06 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+02:32:07 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+ 
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+Building target: DragonFire(SemiHosting).axf
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+Invoking: MCU Linker
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31256	      4	   1760	  33020	   80fc	DragonFire(SemiHosting).axf
+ 
+02:32:17 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+02:32:18 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+02:36:09 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+02:36:09 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/MEMS/MPU_6050.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+../src/MEMS/MPU_6050.c: In function 'MEMSInit':
+Finished building: ../src/MEMS/MPU_6050.c
+../src/MEMS/MPU_6050.c:32:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31256	      4	   1760	  33020	   80fc	DragonFire(SemiHosting).axf
+ 
+02:36:13 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+02:36:14 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+02:37:31 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+02:37:32 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+ 
+Building file: ../src/MEMS/MPU_6050.c
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+Invoking: MCU C Compiler
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/MEMS/MPU_6050.c
+ 
+../src/MEMS/MPU_6050.c: In function 'MEMSInit':
+../src/MEMS/MPU_6050.c:32:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31256	      4	   1760	  33020	   80fc	DragonFire(SemiHosting).axf
+ 
+10:05:13 **** Build of configuration Debug for project itoa ****
+make all 
+Building file: ../main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: itoa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="itoa.map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "itoa_Debug.ld" -o "itoa.axf"  ./main.o   
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol ResetISR; defaulting to 0000000000000000
+Finished building target: itoa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "itoa.axf"; # arm-none-eabi-objcopy -O binary "itoa.axf" "itoa.bin" ; checksum -p LPC1114_201 -d "itoa.bin";
+   text	   data	    bss	    dec	    hex	filename
+     20	      0	      0	     20	     14	itoa.axf
+ 
+10:05:17 **** Incremental Build of configuration Debug for project itoa ****
+make all 
+make: Nothing to be done for `all'.
+00:12:33 **** Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:12:34 **** Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+ 
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+Building file: ../src/MEMS/MPU_6050.c
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+Invoking: MCU C Compiler
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/MEMS/MPU_6050.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31240	      4	   1760	  33004	   80ec	DragonFire(SemiHosting).axf
+ 
+00:12:43 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:12:43 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:18:08 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:18:09 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+ 
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+  31296	      4	   1760	  33060	   8124	DragonFire(SemiHosting).axf
+ 
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+00:18:17 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:18:17 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:23:46 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:23:47 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/MEMS/MPU_6050.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+Finished building: ../src/MEMS/MPU_6050.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31296	      4	   1760	  33060	   8124	DragonFire(SemiHosting).axf
+ 
+00:25:04 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:25:05 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:29:26 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:29:27 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building file: ../src/MEMS/MPU_6050.c
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+../src/MEMS/MPU_6050.c:46:9: error: conflicting types for 'getRawAccelX'
+../src/MEMS/MPU_6050.h:98:10: note: previous declaration of 'getRawAccelX' was here
+../src/MEMS/MPU_6050.c:54:9: error: conflicting types for 'getRawAccelY'
+../src/MEMS/MPU_6050.h:99:10: note: previous declaration of 'getRawAccelY' was here
+../src/MEMS/MPU_6050.c:62:9: error: conflicting types for 'getRawAccelZ'
+../src/MEMS/MPU_6050.h:100:10: note: previous declaration of 'getRawAccelZ' was here
+../src/MEMS/MPU_6050.c:70:9: error: conflicting types for 'getRawGyroX'
+../src/MEMS/MPU_6050.h:101:10: note: previous declaration of 'getRawGyroX' was here
+../src/MEMS/MPU_6050.c:78:9: error: conflicting types for 'getRawGyroY'
+../src/MEMS/MPU_6050.h:102:10: note: previous declaration of 'getRawGyroY' was here
+../src/MEMS/MPU_6050.c:86:9: error: conflicting types for 'getRawGyroZ'
+../src/MEMS/MPU_6050.h:103:10: note: previous declaration of 'getRawGyroZ' was here
+../src/MEMS/MPU_6050.c:94:9: error: conflicting types for 'getTemp'
+../src/MEMS/MPU_6050.h:104:10: note: previous declaration of 'getTemp' was here
+make: *** [src/MEMS/MPU_6050.o] Error 1
+00:29:52 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:29:52 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+ 
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+Building file: ../src/lib/timer16.c
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+Invoking: MCU C Compiler
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/timer16.d" -MT"src/lib/timer16.d" -o "src/lib/timer16.o" "../src/lib/timer16.c"
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+Finished building: ../src/lib/timer16.c
+../src/main.c: In function 'format_SD':
+ 
+../src/main.c:39:15: warning: unused variable 'i' [-Wunused-variable]
+Building file: ../src/MEMS/MPU_6050.c
+../src/main.c:39:11: warning: unused variable 'br' [-Wunused-variable]
+../src/main.c:38:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/main.c:37:6: warning: unused variable 'dir' [-Wunused-variable]
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+Finished building: ../src/MEMS/MPU_6050.c
+ 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31312	      4	   1760	  33076	   8134	DragonFire(SemiHosting).axf
+ 
+00:29:57 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:29:57 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:36:43 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:36:43 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/MEMS/MPU_6050.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/MEMS/MPU_6050.d" -MT"src/MEMS/MPU_6050.d" -o "src/MEMS/MPU_6050.o" "../src/MEMS/MPU_6050.c"
+Finished building: ../src/MEMS/MPU_6050.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31328	      4	   1760	  33092	   8144	DragonFire(SemiHosting).axf
+ 
+00:37:06 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:37:07 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:53:36 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:53:37 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31344	      4	   1760	  33108	   8154	DragonFire(SemiHosting).axf
+ 
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+00:53:40 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:53:40 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:55:50 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+00:57:51 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:57:52 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+ 
+make --no-print-directory post-build
+Performing post-build steps
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+   text	   data	    bss	    dec	    hex	filename
+  31408	      4	   1760	  33172	   8194	DragonFire(SemiHosting).axf
+ 
+00:57:56 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+00:57:57 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+01:00:20 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:00:21 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:131:3: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'int' but argument is of type 'int16_t *'
+Finished building: ../src/lib/gpio.c
+ 
+../src/lib/gpio.c:134:3: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast [enabled by default]
+Building target: DragonFire(SemiHosting).axf
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'int' but argument is of type 'int16_t *'
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:134:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char (*)[5]'
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31408	      4	   1760	  33172	   8194	DragonFire(SemiHosting).axf
+ 
+../src/lib/gpio.c:137:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char (*)[5]'
+../src/lib/gpio.c:140:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char (*)[5]'
+../src/lib/gpio.c:143:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char (*)[5]'
+../src/lib/gpio.c:146:3: warning: passing argument 2 of 'itoa' from incompatible pointer type [enabled by default]
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'char *' but argument is of type 'char (*)[5]'
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+01:00:56 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:00:57 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+../src/lib/gpio.c:131:3: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast [enabled by default]
+ 
+Building target: DragonFire(SemiHosting).axf
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'int' but argument is of type 'int16_t *'
+Invoking: MCU Linker
+../src/lib/gpio.c:134:3: warning: passing argument 1 of 'itoa' makes integer from pointer without a cast [enabled by default]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31408	      4	   1760	  33172	   8194	DragonFire(SemiHosting).axf
+ 
+/Applications/LPCXpresso/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/include/redlib/stdlib.h:115:15: note: expected 'int' but argument is of type 'int16_t *'
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+01:02:54 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:02:55 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+Performing post-build steps
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+  31504	      4	   1760	  33268	   81f4	DragonFire(SemiHosting).axf
+ 
+01:02:59 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:02:59 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+make: Nothing to be done for `all'.
+01:04:05 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC11Uxx ****
+make all 
+make: Nothing to be done for `all'.
+01:04:06 **** Incremental Build of configuration Debug for project DragonFire(SemiHosting) ****
+make all 
+Building file: ../src/lib/gpio.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_CMSIS=CMSISv2p00_LPC11Uxx -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/inc" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/lib" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/SDCard/src" -I"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/DragonFire(SemiHosting)/src/MEMS" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -MMD -MP -MF"src/lib/gpio.d" -MT"src/lib/gpio.d" -o "src/lib/gpio.o" "../src/lib/gpio.c"
+../src/lib/gpio.c: In function 'FLEX_INT0_IRQHandler':
+Finished building: ../src/lib/gpio.c
+ 
+Building target: DragonFire(SemiHosting).axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf"  ./src/lib/delay.o ./src/lib/gpio.o ./src/lib/i2c.o ./src/lib/ssp.o ./src/lib/timer16.o  ./src/SDCard/src/ff.o ./src/SDCard/src/mmc.o  ./src/MEMS/MPU_6050.o  ./src/cr_startup_lpc11u.o ./src/main.o   -lCMSISv2p00_LPC11Uxx
+../src/lib/gpio.c:104:9: warning: unused variable 'count' [-Wunused-variable]
+../src/lib/gpio.c:104:6: warning: unused variable 'j' [-Wunused-variable]
+../src/lib/gpio.c:90:15: warning: unused variable 'i' [-Wunused-variable]
+Finished building target: DragonFire(SemiHosting).axf
+ 
+make --no-print-directory post-build
+../src/lib/gpio.c:90:11: warning: unused variable 'br' [-Wunused-variable]
+../src/lib/gpio.c:89:10: warning: unused variable 'fno' [-Wunused-variable]
+../src/lib/gpio.c:88:6: warning: unused variable 'dir' [-Wunused-variable]
+../src/lib/gpio.c:87:10: warning: unused variable 'rc' [-Wunused-variable]
+Performing post-build steps
+../src/lib/gpio.c:85:7: warning: unused variable 'Buff' [-Wunused-variable]
+arm-none-eabi-size "DragonFire(SemiHosting).axf"; # arm-none-eabi-objcopy -O binary "DragonFire(SemiHosting).axf" "DragonFire(SemiHosting).bin" ; checksum -p LPC11U14_201 -d "DragonFire(SemiHosting).bin";
+   text	   data	    bss	    dec	    hex	filename
+  31576	      4	   1760	  33340	   823c	DragonFire(SemiHosting).axf
+ 

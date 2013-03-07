@@ -1,0 +1,104 @@
+/*
+ * MPU_6050.c
+ *
+ *  Created on: Jan 17, 2013
+ *      Author: steven
+ */
+
+#include "LPC11Uxx.h"			/* LPC11Uxx Peripheral Registers */
+#include "MPU_6050.h"
+#include "i2c.h"
+#include "gpio.h"
+#include "driver_config.h"
+
+void MEMSInit() {
+	  I2CInit();
+
+	  writeRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_SMPLRT_DIV, MPU6050_SMPLRT_DIV);
+	  writeRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_CONFIG, MPU6050_FS_SEL1);
+	  writeRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_CONFIG, MPU6050_AFS_SEL2);
+	  writeRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_INT_PIN_CFG, MPU6050_INT_LEVEL_LOW|MPU6050_LATCH_INT_ENABLE|MPU6050_INT_RD_SET);
+	  writeRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_INT_EN, MPU6050_DATA_RDY_EN);
+	  writeRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_PWR_MGMT_1, MPU6050_WAKE);
+	  /*Interrupt triggers when touched to ground*/
+	  //Therefore it is a idle high, interrupt triggers when pin is low
+	  // use port0_5 as input event, interrupt test.
+
+ 	  GPIOSetDir(PORT0, 21, INPUT );
+	  NVIC_SetPriority(FLEX_INT0_IRQn, GPIOINT0PRIORITY);
+ 	  // port2_1, single edge trigger, active high.
+	  //channel #, port #, bit position, sense, event(polarity)
+	  GPIOSetFlexInterrupt(CHANNEL0, PORT0, 21, 0, 0 );
+	  printf("Test");
+}
+
+
+uint16_t startMEMS() {
+	  NVIC_EnableIRQ(FLEX_INT0_IRQn);
+	  return MEM_ON;
+}
+
+uint16_t stopMEMS() {
+	  NVIC_DisableIRQ(FLEX_INT0_IRQn);
+	  return MEM_OFF;
+}
+
+/*FOR SOME REASON WHEN WRITING TO THE SD CARD, IT READS FROM LEFT TO RIGHT OF GIVEN INPUT OF VARIABLE AND WRITES RIGHT TO LEFT*/
+uint16_t getRawAccelX() {
+	uint16_t upper, lower;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_XOUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_XOUT_L);
+	return (lower<<8)|(upper);
+}
+
+uint16_t getRawAccelY() {
+	uint16_t upper, lower;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_YOUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_YOUT_L);
+	return (lower<<8)|(upper);
+}
+
+uint16_t getRawAccelZ() {
+	uint16_t upper, lower;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_ZOUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_ACCEL_ZOUT_L);
+	return (lower<<8)|(upper);
+}
+
+uint16_t getRawGyroX() {
+	uint16_t upper, lower;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_XOUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_XOUT_L);
+	return (lower<<8)|(upper);
+}
+
+uint16_t getRawGyroY() {
+	uint16_t upper, lower;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_YOUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_YOUT_L);
+	return (lower<<8)|(upper);
+}
+
+uint16_t getRawGyroZ() {
+	uint16_t upper, lower;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_ZOUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_GYRO_ZOUT_L);
+	return (lower<<8)|(upper);
+}
+
+uint32_t getTemp() {
+	uint16_t upper, lower;
+	int16_t val;
+
+	upper = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_TEMP_OUT_H);
+	lower = readRegister(MPU6050_ADDRESS_AD0_LOW, MPU6050_RA_TEMP_OUT_L);
+
+	val = (upper<<8)|(lower);
+	return val/340 + 36; //actually is + 36.53
+}

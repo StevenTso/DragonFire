@@ -26,6 +26,9 @@
 #include "ff.h"
 #include "driver_config.h"
 
+#include <stdlib.h>
+#include <stdio.h>
+
 volatile uint32_t flex_int0_counter = 0;
 volatile uint32_t flex_int1_counter = 0;
 volatile uint32_t flex_int2_counter = 0;
@@ -86,35 +89,89 @@ void FLEX_INT0_IRQHandler(void)
 	FILINFO fno;			/* File information object */
 	UINT bw, br, i;
 
-	UINT data[6], ascii_newline;
+	//5 length, 6 deep
+	char xAccel[5];
+	char yAccel[5];
+	char zAccel[5];
+	char xGyro[5];
+	char yGyro[5];
+	char zGyro[5];
+
+	char ascii_newline;
+
 	ascii_newline = 10;
 
-	int count, status;
+	int j, count, status;
 	status = GPIOGetPinValue(SWITCHPORT, SWITCHPIN);
+
+	int16_t temp[6];
 
 	if(status == ON) {
 		f_mount(0, &Fatfs);		//Register volume work area (never fails)
-		(void)f_open(&Fil, "data.csv", FA_WRITE | FA_OPEN_ALWAYS);
+		(void)f_open(&Fil, "data.txt", FA_WRITE | FA_OPEN_ALWAYS);
 		(void)f_lseek(&Fil, f_size(&Fil));
 
-		data[0] = getRawAccelX();
-		data[1] = getRawAccelY();
-		data[2] = getRawAccelZ();
-		data[3] = getRawGyroX();
-		data[4] = getRawGyroY();
-		data[5] = getRawGyroZ();
-		printf("%x, %x, %x, %x, %x, %x\n", data[0], data[1], data[2], data[3], data[4], data[5]);
 
-		for(count=0; count<5; count++) {
-			(void)f_write(&Fil, &data[count], 2, &bw);
-			(void)f_write(&Fil, ",", 1, &bw);
-		}
-		(void)f_write(&Fil, &data[5], 2, &bw);
+		/*
+		 * 		itoa((int)getRawAccelX(), xAccel, 10);
+		itoa((int)getRawAccelY(), yAccel, 10);
+		itoa((int)getRawAccelZ(), zAccel, 10);
+		itoa((int)getRawGyroX(), xGyro, 10);
+		itoa((int)getRawGyroY(), xGyro, 10);
+		itoa((int)getRawGyroZ(), xGyro, 10);
+		 */
+		temp[0] = getRawAccelX();
+		temp[1] = getRawAccelY();
+		temp[2] = getRawAccelZ();
+		temp[3] = getRawGyroX();
+		temp[4] = getRawGyroY();
+		temp[5] = getRawGyroZ();
+
+		printf("%d, ", temp[0]);
+		itoa((int)temp[0], xAccel, 10);
+		printf("%s, ", xAccel);
+
+		printf("%d, ", temp[1]);
+		itoa((int)temp[1], yAccel, 10);
+		printf("%s, ", yAccel);
+
+		printf("%d, ", temp[2]);
+		itoa((int)temp[2], zAccel, 10);
+		printf("%s, ", zAccel);
+
+		printf("%d, ", temp[3]);
+		itoa((int)temp[3], xGyro, 10);
+		printf("%s, ", xGyro);
+
+		printf("%d, ", temp[4]);
+		itoa((int)temp[4], yGyro, 10);
+		printf("%s, ", yGyro);
+
+		printf("%d", temp[5]);
+		itoa((int)temp[5], zGyro, 10);
+		printf("%s, ", zGyro);
+
+		printf("\n");
+
+		(void)f_write(&Fil, xAccel, sizeof(xAccel), &bw);
+		(void)f_write(&Fil, ",", 1, &bw);
+		(void)f_write(&Fil, yAccel, sizeof(yAccel), &bw);
+		(void)f_write(&Fil, ",", 1, &bw);
+		(void)f_write(&Fil, zAccel, sizeof(zAccel), &bw);
+		(void)f_write(&Fil, ",", 1, &bw);
+		(void)f_write(&Fil, xGyro, sizeof(xGyro), &bw);
+		(void)f_write(&Fil, ",", 1, &bw);
+		(void)f_write(&Fil, yGyro, sizeof(yGyro), &bw);
+		(void)f_write(&Fil, ",", 1, &bw);
+		(void)f_write(&Fil, zGyro, sizeof(zGyro), &bw);
+		(void)f_write(&Fil, ",", 1, &bw);
+
 		(void)f_write(&Fil, &ascii_newline, 1, &bw);
 		(void)f_close(&Fil);
 
 	}
 	else {
+		printf("Disabled\n");
 		NVIC_DisableIRQ(FLEX_INT0_IRQn);
 	}
   return;

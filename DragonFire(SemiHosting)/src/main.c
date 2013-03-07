@@ -25,6 +25,7 @@
 __CRP const unsigned int CRP_WORD = CRP_NO_CRP ;
 
 #include <stdio.h>
+#include <stdlib.h>
 
 // TODO: insert other definitions and declarations here
 FATFS Fatfs;		/* File system object */
@@ -50,6 +51,8 @@ void format_SD() {
 	printf("\nCreate directory DataLog\n");
 	(void)f_mkdir("DataLog");
 
+	//Create a new data.txt everytime
+	(void)f_open(&Fil, "data.txt", FA_WRITE | FA_CREATE_ALWAYS);
 	printf("\nClose the file.\n");
 	rc = f_close(&Fil);
 	if (rc) sd_die(rc);

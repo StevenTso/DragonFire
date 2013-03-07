@@ -32,7 +32,7 @@ all: DragonFire(SemiHosting).axf
 DragonFire(SemiHosting).axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/Users/steven/Desktop/DragonFire/Projects/Embedded/DragonFireV2/CMSISv2p00_LPC11Uxx/Debug" -Xlinker -Map="DragonFire(SemiHosting).map" -Xlinker --gc-sections -mcpu=cortex-m0 -mthumb -T "DragonFire_SemiHosting_Debug.ld" -o "DragonFire(SemiHosting).axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
